@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>geoAreas</name>
+    </assembly>
+    <members>
+        <member name="M:geoAreas.Areas.getTriangleArea(System.Double,System.Double,System.Double)">
+            <summary>
+            Площадь треугольника по известным трем сторонам
+            </summary>
+            <param name="a">длина 1й стороны</param>
+            <param name="b">длина 2й стороны</param>
+            <param name="c">длина 3й стороны</param>
+            <returns>Площадь треугольника</returns>
+        </member>
+        <member name="M:geoAreas.Areas.getTriangleArea(System.Double)">
+            <summary>
+            Площадь равностороннего треугольника (достаточно одной стороны)
+            </summary>
+            <param name="l">Длина стороны</param>
+            <returns></returns>
+        </member>
+        <member name="M:geoAreas.Areas.getTriangleArea(System.Double[])">
+            <summary>
+            Площадь треугольника из массива длин сторон (массив с одним значением для равностороннего, с тремя для любых треугольников)
+            </summary>
+            <param name="l">массив длин сторон</param>
+            <returns>площадь</returns>
+        </member>
+        <member name="M:geoAreas.Areas.getСircleArea(System.Double)">
+            <summary>
+            Площадь круга
+            </summary>
+            <param name="R">Значение радиуса</param>
+            <returns>площадь</returns>
+        </member>
+    </members>
+</doc>
