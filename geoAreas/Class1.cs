@@ -57,7 +57,7 @@ namespace geoAreas
         /// </summary>
         /// <param name="R">Значение радиуса</param>
         /// <returns>площадь</returns>
-        static public double getСircleArea(double R)
+        public static double getСircleArea(double R)
         {
             //Проверка на нулевые и отрицательные значения
             if (R <= 0) { return 0; };
