@@ -67,3 +67,33 @@ namespace geoAreas
         }
     }
 }
+/* Ответ на вопрос о выборке из базы данных (SQL запрос для выбора всех пар «Имя продукта – Имя категории»)
+ Пусть таблица продуктов называется Goods
+
+CREATE TABLE dbo.Goods (
+id int primary key identity, 
+GoodName varchar(250))
+
+, таблица категорий Categories. 
+
+CREATE TABLE dbo.Categories (
+id int primary key identity, 
+CatName varchar(100))
+
+В задании не сказано каким образом осуществляется множественная свящь между продуктами и категориями, исходя из опаыта предложу связь в виде таблицы вида GoodCats содержащую следующие поля 
+
+CREATE TABLE dbo.GoodCats (
+id int primary key identity, 
+Good_id int,
+Сategory_id int)
+  
+тогда запрос на выборку согласно задания будет 
+
+SELECT 
+g.GoodName as 'Имя продукта', 
+c.CatName as 'Имя категории'
+FROM Goods as g
+LEFT JOIN GoodCats as gc ON g.id=gc.Good_id
+LEFT JOIN Categories as c ON gc.Сategory_id=c.id
+ORDER BY GoodName
+ */
