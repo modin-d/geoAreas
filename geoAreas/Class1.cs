@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace geoAreas
 {
@@ -17,6 +18,14 @@ namespace geoAreas
         {
             //Проверка на нулевые и отрицательные значения
             if (a <= 0 || b <= 0 || c <= 0) { return 0; };
+
+            //Проверка на прямоугольность треугольника
+            List<double> l = new List<double>() { a, b, c };
+
+            l.Sort(); l.Reverse();
+
+            if (Math.Pow(l[0], 2) == Math.Pow(l[1], 2) + Math.Pow(l[2], 2)) { return l[1] * l[2] / 2; };
+
 
             double p = (a + b + c) / 2;
             double S = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
@@ -80,7 +89,7 @@ CREATE TABLE dbo.Categories (
 id int primary key identity, 
 CatName varchar(100))
 
-В задании не сказано каким образом осуществляется множественная свящь между продуктами и категориями, исходя из опаыта предложу связь в виде таблицы вида GoodCats содержащую следующие поля 
+В задании не сказано каким образом осуществляется множественная свящь между продуктами и категориями, исходя из опыта предложу связь в виде таблицы вида GoodCats содержащую следующие поля 
 
 CREATE TABLE dbo.GoodCats (
 id int primary key identity, 
